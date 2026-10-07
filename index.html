@@ -1,566 +1,2374 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Savens Adult Family Home | Kennewick, WA</title>
+<title>Savens Adult Family Home | Kennewick, WA</title>
 
-    <meta
-        name="description"
-        content="Savens Adult Family Home in Kennewick, Washington provides compassionate, personalized care in a safe and comfortable home-like environment."
-    >
+<meta name="description"
+content="Savens Adult Family Home in Kennewick, Washington provides compassionate, personalized support in a safe and comfortable home-like environment.">
 
-    <link rel="stylesheet" href="style.css">
+<style>
+
+/* =========================================================
+   SAVENS ADULT FAMILY HOME
+   COMPLETE ONE-FILE WEBSITE
+========================================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#ffffff;
+    color:#17313a;
+    line-height:1.6;
+}
+
+:root{
+    --navy:#0c3947;
+    --navy-dark:#072a34;
+    --teal:#247e86;
+    --green:#6fc7a8;
+    --light-green:#eef8f3;
+    --blue:#79b9da;
+    --cream:#f8f7f2;
+    --gold:#e6b94c;
+    --white:#ffffff;
+    --text:#263e45;
+    --muted:#667b82;
+    --border:#e4ece9;
+}
+
+img{
+    width:100%;
+    display:block;
+}
+
+a{
+    text-decoration:none;
+}
+
+.container{
+    width:min(1180px,92%);
+    margin:auto;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.site-header{
+    background:#ffffff;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    border-bottom:1px solid #e9eeee;
+    box-shadow:0 2px 14px rgba(0,0,0,.05);
+}
+
+.navbar{
+    min-height:82px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:30px;
+}
+
+
+/* LOGO */
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    color:var(--navy);
+}
+
+.logo-symbol{
+    width:52px;
+    height:52px;
+    border:3px solid var(--teal);
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:28px;
+    color:var(--teal);
+    font-weight:bold;
+}
+
+.logo-copy{
+    display:flex;
+    flex-direction:column;
+    line-height:1.05;
+}
+
+.logo-copy strong{
+    font-size:27px;
+    color:var(--navy);
+    letter-spacing:.5px;
+}
+
+.logo-copy span{
+    font-size:15px;
+    font-weight:700;
+    color:#36565e;
+}
+
+.logo-copy small{
+    font-size:9px;
+    margin-top:4px;
+    color:#73868a;
+}
+
+
+/* NAV */
+
+.main-nav{
+    display:flex;
+    align-items:center;
+    gap:31px;
+}
+
+.main-nav a{
+    color:#183943;
+    font-size:15px;
+    font-weight:700;
+    padding:30px 0 25px;
+    position:relative;
+}
+
+.main-nav a::after{
+    content:"";
+    width:0;
+    height:3px;
+    background:var(--teal);
+    position:absolute;
+    bottom:17px;
+    left:0;
+    transition:.25s;
+}
+
+.main-nav a:hover::after,
+.main-nav a.active::after{
+    width:100%;
+}
+
+
+/* HEADER CTA */
+
+.header-button{
+    background:var(--navy);
+    color:#ffffff;
+    padding:13px 25px;
+    border-radius:10px;
+    font-weight:700;
+    font-size:15px;
+    white-space:nowrap;
+}
+
+.header-button:hover{
+    background:var(--teal);
+}
+
+
+/* MOBILE BUTTON */
+
+.menu-button{
+    display:none;
+    border:0;
+    background:none;
+    font-size:31px;
+    color:var(--navy);
+    cursor:pointer;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero{
+    min-height:540px;
+    position:relative;
+    overflow:hidden;
+    background:
+        linear-gradient(110deg,#0b3b49 0%,#155564 49%,#d7e8df 100%);
+}
+
+.hero-photo{
+    position:absolute;
+    inset:0;
+    z-index:0;
+}
+
+.hero-photo img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:center;
+}
+
+.hero-photo::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(7,45,56,.96) 0%,
+            rgba(8,55,67,.90) 29%,
+            rgba(11,61,72,.56) 46%,
+            rgba(0,0,0,.05) 72%
+        );
+}
+
+.hero-inner{
+    position:relative;
+    z-index:2;
+    min-height:540px;
+    display:flex;
+    align-items:center;
+}
+
+.hero-content{
+    color:#ffffff;
+    width:min(580px,100%);
+    padding:65px 0;
+}
+
+.hero-pill{
+    display:inline-flex;
+    border:1px solid rgba(255,255,255,.45);
+    border-radius:30px;
+    padding:7px 17px;
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:1.6px;
+    margin-bottom:22px;
+}
+
+.hero-pill b{
+    margin-left:5px;
+    color:#8ce1bd;
+}
+
+.hero h1{
+    font-size:54px;
+    line-height:1.03;
+    max-width:580px;
+    margin-bottom:18px;
+    letter-spacing:-1px;
+}
+
+.hero-description{
+    font-size:18px;
+    color:#edf7f7;
+    max-width:510px;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:15px;
+    margin-top:28px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    min-height:50px;
+    padding:13px 27px;
+    border-radius:9px;
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+    gap:8px;
+    font-weight:700;
+    transition:.25s;
+}
+
+.btn-primary{
+    background:#80e0bb;
+    color:#0a3b45;
+}
+
+.btn-primary:hover{
+    background:#ffffff;
+}
+
+.btn-outline{
+    border:1px solid rgba(255,255,255,.8);
+    color:#ffffff;
+}
+
+.btn-outline:hover{
+    background:#ffffff;
+    color:var(--navy);
+}
+
+.hero-benefits{
+    display:flex;
+    gap:27px;
+    margin-top:38px;
+    flex-wrap:wrap;
+}
+
+.hero-benefit{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-size:13px;
+    font-weight:700;
+    line-height:1.2;
+}
+
+.hero-benefit-icon{
+    width:42px;
+    height:42px;
+    border-radius:50%;
+    border:1px solid rgba(255,255,255,.6);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:21px;
+}
+
+
+/* =========================================================
+   COMMON SECTION
+========================================================= */
+
+section{
+    scroll-margin-top:85px;
+}
+
+.section{
+    padding:85px 0;
+}
+
+.eyebrow{
+    font-size:12px;
+    color:var(--teal);
+    font-weight:800;
+    letter-spacing:2px;
+    margin-bottom:7px;
+    text-transform:uppercase;
+}
+
+.section-title{
+    font-size:39px;
+    line-height:1.1;
+    color:var(--navy);
+    margin-bottom:12px;
+}
+
+.section-description{
+    color:var(--muted);
+    max-width:680px;
+    font-size:17px;
+}
+
+
+/* =========================================================
+   SERVICES
+========================================================= */
+
+.services{
+    background:#ffffff;
+}
+
+.services-layout{
+    display:grid;
+    grid-template-columns:1.35fr .85fr;
+    gap:50px;
+    align-items:center;
+}
+
+.services-grid{
+    margin-top:30px;
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:16px;
+}
+
+.service-card{
+    background:#ffffff;
+    border:1px solid var(--border);
+    border-radius:13px;
+    padding:24px;
+    box-shadow:0 8px 26px rgba(28,70,70,.07);
+}
+
+.service-icon{
+    width:43px;
+    height:43px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:20px;
+    margin-bottom:15px;
+}
+
+.icon-teal{
+    background:#a8e3da;
+}
+
+.icon-blue{
+    background:#b7dff4;
+}
+
+.icon-green{
+    background:#9edeb8;
+}
+
+.icon-gold{
+    background:#f3d77b;
+}
+
+.service-card h3{
+    font-size:17px;
+    line-height:1.25;
+    margin-bottom:7px;
+    color:var(--navy);
+}
+
+.service-card p{
+    font-size:14px;
+    color:#687d83;
+}
+
+.services-image{
+    border-radius:16px;
+    overflow:hidden;
+    min-height:460px;
+    background:#dfe9e5;
+}
+
+.services-image img{
+    height:460px;
+    object-fit:cover;
+}
+
+
+/* =========================================================
+   HOME / GALLERY
+========================================================= */
+
+.home{
+    background:var(--light-green);
+}
+
+.section-heading-row{
+    display:flex;
+    justify-content:space-between;
+    align-items:end;
+    gap:30px;
+    margin-bottom:30px;
+}
+
+.small-outline-button{
+    border:1px solid var(--navy);
+    color:var(--navy);
+    padding:9px 19px;
+    border-radius:20px;
+    font-size:13px;
+    font-weight:bold;
+}
+
+.home-gallery{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:10px;
+}
+
+.home-image{
+    height:230px;
+    border-radius:10px;
+    overflow:hidden;
+    position:relative;
+    background:#dfe9e5;
+}
+
+.home-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.home-image span{
+    position:absolute;
+    bottom:0;
+    left:0;
+    right:0;
+    padding:25px 12px 10px;
+    color:#ffffff;
+    font-weight:700;
+    font-size:14px;
+    background:linear-gradient(transparent,rgba(0,0,0,.75));
+}
+
+
+/* =========================================================
+   ABOUT
+========================================================= */
+
+.about{
+    background:#ffffff;
+}
+
+.about-grid{
+    display:grid;
+    grid-template-columns:.9fr 1.1fr;
+    gap:55px;
+    align-items:center;
+}
+
+.about-photo{
+    border-radius:15px;
+    overflow:hidden;
+    background:#e5ece9;
+    min-height:460px;
+}
+
+.about-photo img{
+    height:460px;
+    object-fit:cover;
+}
+
+.about-text p{
+    color:#60757b;
+    font-size:16px;
+    margin-bottom:15px;
+}
+
+.about-points{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:12px;
+    margin:28px 0;
+}
+
+.about-point{
+    padding:17px;
+    border:1px solid var(--border);
+    border-radius:10px;
+    display:flex;
+    gap:11px;
+    align-items:center;
+}
+
+.about-point-icon{
+    width:38px;
+    height:38px;
+    min-width:38px;
+    border-radius:50%;
+    background:#dcf4e8;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.about-point strong{
+    display:block;
+    font-size:13px;
+    color:var(--navy);
+}
+
+.about-point small{
+    display:block;
+    font-size:11px;
+    color:#788b90;
+}
+
+.dark-button{
+    background:var(--navy);
+    color:#ffffff;
+}
+
+.dark-button:hover{
+    background:var(--teal);
+}
+
+
+/* =========================================================
+   ACCOMMODATION
+========================================================= */
+
+.accommodation{
+    background:#f8faf9;
+}
+
+.center-title{
+    max-width:710px;
+    margin:auto;
+    text-align:center;
+}
+
+.center-title .section-description{
+    margin:auto;
+}
+
+.accommodation-grid{
+    max-width:1000px;
+    margin:40px auto 0;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.accommodation-card{
+    background:#ffffff;
+    padding:35px 28px;
+    text-align:center;
+    border:1px solid var(--border);
+    border-radius:13px;
+}
+
+.room-badge{
+    width:62px;
+    height:62px;
+    background:#dff2eb;
+    color:var(--navy);
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:0 auto 18px;
+    font-size:25px;
+    font-weight:800;
+}
+
+.accommodation-card h3{
+    color:var(--navy);
+    margin-bottom:8px;
+}
+
+.accommodation-card p{
+    font-size:14px;
+    color:#6e8186;
+}
+
+
+/* =========================================================
+   WHY US
+========================================================= */
+
+.why{
+    background:var(--navy);
+    color:#ffffff;
+}
+
+.why .eyebrow{
+    color:#8ce1bd;
+}
+
+.why .section-title{
+    color:#ffffff;
+}
+
+.why .section-description{
+    color:#dce9eb;
+}
+
+.why-grid{
+    margin-top:40px;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+}
+
+.why-card{
+    border:1px solid rgba(255,255,255,.15);
+    background:rgba(255,255,255,.07);
+    border-radius:12px;
+    padding:28px 23px;
+}
+
+.why-card-icon{
+    font-size:27px;
+    color:#91e0bf;
+}
+
+.why-card h3{
+    margin:13px 0 7px;
+    font-size:18px;
+}
+
+.why-card p{
+    color:#d1e0e3;
+    font-size:14px;
+}
+
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
+.contact{
+    padding:0;
+    background:#ffffff;
+}
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:.8fr 1.2fr;
+}
+
+.contact-info{
+    background:#0b3d49;
+    color:#ffffff;
+    padding:60px max(45px,calc((100vw - 1180px)/2));
+    padding-right:55px;
+}
+
+.contact-info .eyebrow{
+    color:#91ddb9;
+}
+
+.contact-info h2{
+    font-size:39px;
+    margin-bottom:13px;
+}
+
+.contact-info > p{
+    color:#d5e3e6;
+    margin-bottom:28px;
+}
+
+.contact-detail{
+    display:flex;
+    gap:13px;
+    margin:17px 0;
+    align-items:flex-start;
+}
+
+.contact-detail-icon{
+    width:32px;
+    height:32px;
+    background:rgba(255,255,255,.09);
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.contact-detail a{
+    color:#ffffff;
+}
+
+.contact-form{
+    padding:60px max(45px,calc((100vw - 1180px)/2));
+    padding-left:55px;
+    background:#f7faf9;
+}
+
+.contact-form h3{
+    color:var(--navy);
+    font-size:27px;
+    margin-bottom:22px;
+}
+
+.form-row{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:15px;
+}
+
+.form-group{
+    margin-bottom:15px;
+}
+
+.form-group label{
+    display:block;
+    font-size:12px;
+    font-weight:700;
+    margin-bottom:5px;
+    color:#445d63;
+}
+
+.form-group input,
+.form-group textarea{
+    width:100%;
+    border:1px solid #d8e2df;
+    background:#ffffff;
+    border-radius:6px;
+    padding:13px;
+    font:inherit;
+    outline:none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus{
+    border-color:var(--teal);
+}
+
+.submit-button{
+    width:100%;
+    border:0;
+    padding:14px 20px;
+    background:var(--navy);
+    color:#ffffff;
+    border-radius:7px;
+    font-size:15px;
+    font-weight:700;
+    cursor:pointer;
+}
+
+.submit-button:hover{
+    background:var(--teal);
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.footer{
+    background:#072b35;
+    color:#d5e4e7;
+    padding:55px 0 20px;
+}
+
+.footer-grid{
+    display:grid;
+    grid-template-columns:1.7fr 1fr 1.3fr;
+    gap:70px;
+    padding-bottom:40px;
+}
+
+.footer-logo strong{
+    display:block;
+    font-size:27px;
+    color:#ffffff;
+}
+
+.footer-logo span{
+    color:#a4d5c5;
+    font-size:14px;
+}
+
+.footer-about p{
+    max-width:430px;
+    color:#b9cdd1;
+    margin-top:16px;
+    font-size:14px;
+}
+
+.footer h4{
+    color:#ffffff;
+    margin-bottom:15px;
+}
+
+.footer-links a,
+.footer-contact a{
+    display:block;
+    color:#c4d7da;
+    margin:8px 0;
+    font-size:14px;
+}
+
+.footer-links a:hover,
+.footer-contact a:hover{
+    color:#8fe0be;
+}
+
+.footer-contact p{
+    font-size:14px;
+    color:#c4d7da;
+    margin-bottom:10px;
+}
+
+.footer-bottom{
+    border-top:1px solid rgba(255,255,255,.1);
+    padding-top:19px;
+    text-align:center;
+    font-size:12px;
+    color:#93aaaf;
+}
+
+
+/* =========================================================
+   IMAGE FALLBACK
+========================================================= */
+
+.image-fallback{
+    background:
+        linear-gradient(135deg,#dcece7,#c7dcd5);
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media(max-width:1050px){
+
+    .main-nav{
+        gap:18px;
+    }
+
+    .main-nav a{
+        font-size:13px;
+    }
+
+    .header-button{
+        padding:11px 18px;
+    }
+
+    .hero h1{
+        font-size:47px;
+    }
+
+    .home-gallery{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+    .home-image{
+        height:210px;
+    }
+
+    .why-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .about-points{
+        grid-template-columns:1fr;
+    }
+}
+
+
+@media(max-width:820px){
+
+    .navbar{
+        min-height:70px;
+    }
+
+    .logo-symbol{
+        width:43px;
+        height:43px;
+        font-size:22px;
+    }
+
+    .logo-copy strong{
+        font-size:22px;
+    }
+
+    .logo-copy span{
+        font-size:12px;
+    }
+
+    .logo-copy small{
+        display:none;
+    }
+
+    .menu-button{
+        display:block;
+    }
+
+    .header-button{
+        display:none;
+    }
+
+    .main-nav{
+        display:none;
+        position:absolute;
+        top:70px;
+        left:0;
+        right:0;
+        background:#ffffff;
+        flex-direction:column;
+        align-items:stretch;
+        padding:10px 5%;
+        gap:0;
+        box-shadow:0 8px 15px rgba(0,0,0,.10);
+    }
+
+    .main-nav.open{
+        display:flex;
+    }
+
+    .main-nav a{
+        padding:14px 0;
+        border-bottom:1px solid #edf1ef;
+        font-size:15px;
+    }
+
+    .main-nav a::after{
+        display:none;
+    }
+
+
+    .hero{
+        min-height:650px;
+    }
+
+    .hero-inner{
+        min-height:650px;
+        align-items:flex-end;
+    }
+
+    .hero-photo::after{
+        background:
+            linear-gradient(
+                0deg,
+                rgba(7,45,56,.98) 0%,
+                rgba(7,45,56,.95) 44%,
+                rgba(7,45,56,.30) 75%
+            );
+    }
+
+    .hero-content{
+        padding:270px 0 50px;
+    }
+
+    .hero h1{
+        font-size:43px;
+    }
+
+    .hero-description{
+        font-size:16px;
+    }
+
+
+    .services-layout,
+    .about-grid{
+        grid-template-columns:1fr;
+    }
+
+    .services-image{
+        order:-1;
+        min-height:310px;
+    }
+
+    .services-image img{
+        height:310px;
+    }
+
+    .home-gallery{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .accommodation-grid{
+        grid-template-columns:1fr;
+    }
+
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+
+    .contact-info,
+    .contact-form{
+        padding:50px 5%;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr;
+        gap:30px;
+    }
+}
+
+
+@media(max-width:560px){
+
+    .section{
+        padding:65px 0;
+    }
+
+    .hero h1{
+        font-size:37px;
+    }
+
+    .hero-buttons{
+        flex-direction:column;
+    }
+
+    .hero-buttons .btn{
+        width:100%;
+    }
+
+    .hero-benefits{
+        gap:18px;
+    }
+
+    .hero-benefit{
+        width:45%;
+    }
+
+    .section-title{
+        font-size:32px;
+    }
+
+    .services-grid{
+        grid-template-columns:1fr;
+    }
+
+    .section-heading-row{
+        display:block;
+    }
+
+    .small-outline-button{
+        display:inline-block;
+        margin-top:17px;
+    }
+
+    .home-gallery{
+        grid-template-columns:1fr;
+    }
+
+    .home-image{
+        height:270px;
+    }
+
+    .about-photo{
+        min-height:320px;
+    }
+
+    .about-photo img{
+        height:320px;
+    }
+
+    .why-grid{
+        grid-template-columns:1fr;
+    }
+
+    .form-row{
+        grid-template-columns:1fr;
+    }
+}
+
+</style>
 </head>
+
 
 <body>
 
-<!-- =========================
+
+<!-- =====================================================
      HEADER
-========================= -->
+===================================================== -->
 
 <header class="site-header">
 
-    <div class="header-inner">
+<div class="container navbar">
 
-        <a href="index.html" class="brand">
-            <span class="brand-main">SAVENS</span>
-            <span class="brand-sub">ADULT FAMILY HOME</span>
+    <a href="#home" class="logo">
+
+        <div class="logo-symbol">
+            ♥
+        </div>
+
+        <div class="logo-copy">
+
+            <strong>
+                Savens
+            </strong>
+
+            <span>
+                Adult Family Home
+            </span>
+
+            <small>
+                Care Today. Brighter Tomorrows.
+            </small>
+
+        </div>
+
+    </a>
+
+
+    <button
+        class="menu-button"
+        id="menuButton"
+        aria-label="Open navigation">
+
+        ☰
+
+    </button>
+
+
+    <nav class="main-nav" id="mainNav">
+
+        <a href="#home" class="active">
+            Home
         </a>
 
-        <button class="menu-toggle" id="menuToggle" aria-label="Open navigation">
-            ☰
-        </button>
-
-        <nav class="main-nav" id="mainNav">
-            <a href="index.html" class="active">Home</a>
-            <a href="about.html">About</a>
-            <a href="services.html">Services</a>
-            <a href="our-home.html">Our Home</a>
-            <a href="gallery.html">Gallery</a>
-            <a href="#why-us">Why Choose Us</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-
-        <a href="tel:9783289455" class="call-button">
-            Call Us
+        <a href="#about">
+            About
         </a>
 
-    </div>
+        <a href="#services">
+            Services
+        </a>
+
+        <a href="#our-home">
+            Our Home
+        </a>
+
+        <a href="#gallery">
+            Gallery
+        </a>
+
+        <a href="#why">
+            Why Savens
+        </a>
+
+        <a href="#contact">
+            Contact
+        </a>
+
+    </nav>
+
+
+    <a href="#contact" class="header-button">
+        Get in Touch
+    </a>
+
+</div>
 
 </header>
 
 
-<!-- =========================
+
+<!-- =====================================================
      HERO
-========================= -->
+===================================================== -->
 
-<main>
+<section class="hero" id="home">
 
-<section class="hero">
+<div class="hero-photo">
 
     <img
         src="images/home-exterior-clean.jpg"
-        alt="Savens Adult Family Home in Kennewick Washington"
-        class="hero-image"
-    >
+        alt="Savens Adult Family Home exterior"
+        onerror="this.style.display='none'">
 
-    <div class="hero-overlay"></div>
+</div>
+
+
+<div class="container hero-inner">
 
     <div class="hero-content">
 
-        <p class="hero-small">WELCOME TO</p>
+        <div class="hero-pill">
+
+            A SAFE PLACE TO CALL
+            <b>HOME</b>
+
+        </div>
+
 
         <h1>
-            SAVENS
-            <span>ADULT FAMILY HOME</span>
+            Compassionate Care
+            <br>
+            for a Brighter
+            <br>
+            Tomorrow
         </h1>
 
-        <p class="hero-tagline">
-            Compassionate Care • Comfortable Living<br>
-            A Place to Call Home
+
+        <p class="hero-description">
+
+            Savens Adult Family Home provides a safe,
+            comfortable and supportive residential
+            environment with personalized care and
+            individualized attention.
+
         </p>
 
-        <p class="hero-location">
-            📍 Kennewick, WA
-        </p>
 
         <div class="hero-buttons">
 
-            <a href="contact.html" class="button button-primary">
+            <a href="#services"
+               class="btn btn-primary">
+
+                Our Services
+                <span>→</span>
+
+            </a>
+
+
+            <a href="#contact"
+               class="btn btn-outline">
+
                 Contact Us
+
             </a>
 
-            <a href="about.html" class="button button-outline">
-                Learn About Our Care
-            </a>
+        </div>
+
+
+        <div class="hero-benefits">
+
+
+            <div class="hero-benefit">
+
+                <div class="hero-benefit-icon">
+                    ♡
+                </div>
+
+                <div>
+                    Personalized
+                    <br>
+                    Care
+                </div>
+
+            </div>
+
+
+            <div class="hero-benefit">
+
+                <div class="hero-benefit-icon">
+                    ◎
+                </div>
+
+                <div>
+                    Individualized
+                    <br>
+                    Attention
+                </div>
+
+            </div>
+
+
+            <div class="hero-benefit">
+
+                <div class="hero-benefit-icon">
+                    ⌂
+                </div>
+
+                <div>
+                    Comfortable
+                    <br>
+                    Home
+                </div>
+
+            </div>
+
 
         </div>
 
     </div>
 
-</section>
-
-
-<!-- =========================
-     SERVICES QUICK VIEW
-========================= -->
-
-<section class="services-strip">
-
-    <div class="services-grid">
-
-        <div class="service-item">
-            <div class="service-icon">♿</div>
-            <h3>Developmental Disability Services</h3>
-        </div>
-
-        <div class="service-item">
-            <div class="service-icon alternate">🧠</div>
-            <h3>Dementia Care</h3>
-        </div>
-
-        <div class="service-item">
-            <div class="service-icon">♡</div>
-            <h3>Mental Health Support</h3>
-        </div>
-
-        <div class="service-item">
-            <div class="service-icon alternate">🤲</div>
-            <h3>Daily Living Assistance</h3>
-        </div>
-
-        <div class="service-item">
-            <div class="service-icon">⌂</div>
-            <h3>Home-like Environment</h3>
-        </div>
-
-        <div class="service-item">
-            <div class="service-icon alternate">👥</div>
-            <h3>Individualized Attention</h3>
-        </div>
-
-    </div>
+</div>
 
 </section>
 
 
-<!-- =========================
-     ABOUT
-========================= -->
 
-<section class="about-home">
+<!-- =====================================================
+     SERVICES
+===================================================== -->
 
-    <div class="about-copy">
+<section class="section services" id="services">
 
-        <p class="section-label">
-            ABOUT SAVENS
-        </p>
+<div class="container services-layout">
 
-        <h2>
-            A Safe, Comfortable<br>
-            and Caring Home
+
+    <div>
+
+
+        <div class="eyebrow">
+            WHAT WE OFFER
+        </div>
+
+
+        <h2 class="section-title">
+            Our Services
         </h2>
 
-        <p>
-            At Savens Adult Family Home, we provide compassionate,
-            person-centered support in a welcoming residential environment.
+
+        <p class="section-description">
+
+            We provide compassionate and personalized support
+            designed around the individual needs, comfort and
+            dignity of each resident.
+
         </p>
 
-        <p>
-            Our goal is to support each resident's dignity, comfort,
-            independence and overall quality of life while providing
-            individualized assistance based on their needs.
-        </p>
 
-        <a href="about.html" class="button button-primary">
-            Learn More About Us
-        </a>
+        <div class="services-grid">
+
+
+            <article class="service-card">
+
+                <div class="service-icon icon-teal">
+                    ♿
+                </div>
+
+                <h3>
+                    Developmental Disability Services
+                </h3>
+
+                <p>
+
+                    Individualized support in a safe,
+                    respectful and comfortable residential
+                    environment.
+
+                </p>
+
+            </article>
+
+
+
+            <article class="service-card">
+
+                <div class="service-icon icon-blue">
+                    ◉
+                </div>
+
+                <h3>
+                    Dementia Care
+                </h3>
+
+                <p>
+
+                    Compassionate assistance focused on
+                    familiarity, comfort and dignity.
+
+                </p>
+
+            </article>
+
+
+
+            <article class="service-card">
+
+                <div class="service-icon icon-green">
+                    ♡
+                </div>
+
+                <h3>
+                    Mental Health Support
+                </h3>
+
+                <p>
+
+                    A calm and supportive environment centered
+                    around individual well-being.
+
+                </p>
+
+            </article>
+
+
+
+            <article class="service-card">
+
+                <div class="service-icon icon-gold">
+                    ⌂
+                </div>
+
+                <h3>
+                    Daily Living Assistance
+                </h3>
+
+                <p>
+
+                    Personalized support with everyday living
+                    while promoting dignity and independence.
+
+                </p>
+
+            </article>
+
+
+        </div>
 
     </div>
 
 
-    <div class="about-gallery">
+
+    <div class="services-image">
 
         <img
             src="images/living-room-main.jpg"
-            alt="Comfortable living room at Savens Adult Family Home"
-            class="gallery-large"
-        >
+            alt="Living room at Savens Adult Family Home"
+            onerror="this.style.display='none'">
 
-        <div class="gallery-small-column">
+    </div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     OUR HOME
+===================================================== -->
+
+<section class="section home" id="our-home">
+
+<div class="container">
+
+
+    <div class="section-heading-row">
+
+
+        <div>
+
+            <div class="eyebrow">
+                OUR HOME
+            </div>
+
+            <h2 class="section-title">
+                A Comfortable &amp; Welcoming Environment
+            </h2>
+
+            <p class="section-description">
+
+                Our residential setting is designed to feel
+                familiar, peaceful, comfortable and welcoming.
+
+            </p>
+
+        </div>
+
+
+        <a href="#gallery"
+           class="small-outline-button">
+
+            View More Photos →
+
+        </a>
+
+    </div>
+
+
+
+    <div class="home-gallery" id="gallery">
+
+
+        <div class="home-image">
 
             <img
                 src="images/kitchen.jpg"
-                alt="Kitchen at Savens Adult Family Home"
-            >
+                alt="Savens kitchen"
+                onerror="this.style.display='none'">
+
+            <span>
+                Kitchen
+            </span>
+
+        </div>
+
+
+
+        <div class="home-image">
+
+            <img
+                src="images/living-room-main.jpg"
+                alt="Savens living room"
+                onerror="this.style.display='none'">
+
+            <span>
+                Living Area
+            </span>
+
+        </div>
+
+
+
+        <div class="home-image">
 
             <img
                 src="images/private-room.jpg"
-                alt="Resident bedroom at Savens Adult Family Home"
-            >
+                alt="Savens private room"
+                onerror="this.style.display='none'">
+
+            <span>
+                Private Room
+            </span>
 
         </div>
 
+
+
+        <div class="home-image">
+
+            <img
+                src="images/shared-room.jpg"
+                alt="Savens shared room"
+                onerror="this.style.display='none'">
+
+            <span>
+                Shared Room
+            </span>
+
+        </div>
+
+
+
+        <div class="home-image">
+
+            <img
+                src="images/bathroom.jpg"
+                alt="Savens bathroom"
+                onerror="this.style.display='none'">
+
+            <span>
+                Bathroom
+            </span>
+
+        </div>
+
+
     </div>
+
+</div>
 
 </section>
 
 
-<!-- =========================
-     OUR HOME
-========================= -->
 
-<section class="home-section">
+<!-- =====================================================
+     ABOUT
+===================================================== -->
 
-    <div class="section-heading">
+<section class="section about" id="about">
 
-        <p class="section-label">OUR HOME</p>
-
-        <h2>
-            Comfortable Living Designed Around Care
-        </h2>
-
-        <p>
-            Savens provides a clean, welcoming residential environment
-            designed to feel familiar, peaceful and comfortable.
-        </p>
-
-    </div>
+<div class="container about-grid">
 
 
-    <div class="feature-grid">
+    <div class="about-photo">
 
-        <div class="home-feature">
-            <span class="feature-number">2</span>
-            <h3>Spacious Shared Rooms</h3>
-            <p>
-                Comfortable shared accommodation designed to create
-                a warm residential atmosphere.
-            </p>
-        </div>
-
-        <div class="home-feature">
-            <span class="feature-number">1</span>
-            <h3>Private Room</h3>
-            <p>
-                Private accommodation providing additional personal
-                space and comfort.
-            </p>
-        </div>
-
-        <div class="home-feature">
-            <span class="feature-symbol">⌂</span>
-            <h3>Shared Living Areas</h3>
-            <p>
-                Comfortable living, dining and common spaces where
-                residents can relax and feel at home.
-            </p>
-        </div>
-
-        <div class="home-feature">
-            <span class="feature-symbol">♥</span>
-            <h3>Provider Lives in the Home</h3>
-            <p>
-                A familiar and supportive residential environment
-                with the provider living in the home.
-            </p>
-        </div>
-
-    </div>
-
-    <div class="center-button">
-
-        <a href="our-home.html" class="button button-dark">
-            Explore Our Home
-        </a>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     HOME PHOTO FEATURE
-========================= -->
-
-<section class="photo-feature">
-
-    <div class="photo-feature-image">
         <img
             src="images/living-room-wide.jpg"
-            alt="Living and dining area at Savens Adult Family Home"
-        >
+            alt="Savens Adult Family Home interior"
+            onerror="this.style.display='none'">
+
     </div>
 
-    <div class="photo-feature-text">
 
-        <p class="section-label">A PLACE TO CALL HOME</p>
 
-        <h2>
-            More Than Care.<br>
-            A Place of Comfort.
+    <div class="about-text">
+
+
+        <div class="eyebrow">
+            ABOUT SAVENS
+        </div>
+
+
+        <h2 class="section-title">
+
+            A Place Where Care
+            Feels Like Home
+
         </h2>
 
-        <p>
-            We believe quality care begins with an environment where
-            people feel respected, secure and at home.
-        </p>
 
         <p>
-            Our approach combines individualized support with comfortable
-            surroundings and compassionate attention.
+
+            At Savens Adult Family Home, we believe every
+            resident deserves to live with dignity, comfort
+            and respect.
+
         </p>
 
-        <a href="gallery.html" class="text-link">
-            View Our Photo Gallery →
+
+        <p>
+
+            Our warm home-like setting allows us to provide
+            individualized support while promoting
+            independence, comfort and quality of life.
+
+        </p>
+
+
+
+        <div class="about-points">
+
+
+            <div class="about-point">
+
+                <div class="about-point-icon">
+                    ♥
+                </div>
+
+                <div>
+
+                    <strong>
+                        Compassionate Care
+                    </strong>
+
+                    <small>
+                        Respectful support
+                    </small>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="about-point">
+
+                <div class="about-point-icon">
+                    ◎
+                </div>
+
+                <div>
+
+                    <strong>
+                        Individual Attention
+                    </strong>
+
+                    <small>
+                        Personal needs matter
+                    </small>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="about-point">
+
+                <div class="about-point-icon">
+                    ⌂
+                </div>
+
+                <div>
+
+                    <strong>
+                        Peaceful Environment
+                    </strong>
+
+                    <small>
+                        Comfortable surroundings
+                    </small>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <a href="#contact"
+           class="btn dark-button">
+
+            Learn More About Savens
+
         </a>
 
     </div>
 
+
+</div>
+
 </section>
 
 
-<!-- =========================
-     WHY CHOOSE US
-========================= -->
 
-<section class="why-us" id="why-us">
+<!-- =====================================================
+     ACCOMMODATION
+===================================================== -->
 
-    <div class="section-heading light">
+<section class="section accommodation">
 
-        <p class="section-label gold">WHY CHOOSE SAVENS</p>
+<div class="container">
 
-        <h2>
-            Care Centered Around the Individual
+
+    <div class="center-title">
+
+        <div class="eyebrow">
+            COMFORTABLE LIVING
+        </div>
+
+        <h2 class="section-title">
+            Our Home
         </h2>
 
-        <p>
-            We strive to create a supportive environment where every
-            resident is treated with dignity and respect.
+        <p class="section-description">
+
+            Savens offers comfortable residential spaces
+            designed around care, dignity and a sense of
+            belonging.
+
         </p>
 
     </div>
+
+
+
+    <div class="accommodation-grid">
+
+
+        <article class="accommodation-card">
+
+            <div class="room-badge">
+                2
+            </div>
+
+            <h3>
+                Spacious Shared Rooms
+            </h3>
+
+            <p>
+
+                Comfortable shared accommodation within
+                a welcoming residential environment.
+
+            </p>
+
+        </article>
+
+
+
+        <article class="accommodation-card">
+
+            <div class="room-badge">
+                1
+            </div>
+
+            <h3>
+                Private Room
+            </h3>
+
+            <p>
+
+                Private accommodation providing additional
+                personal space and comfort.
+
+            </p>
+
+        </article>
+
+
+
+        <article class="accommodation-card">
+
+            <div class="room-badge">
+                ♥
+            </div>
+
+            <h3>
+                Provider Lives in the Home
+            </h3>
+
+            <p>
+
+                A familiar and supportive environment
+                with the provider residing in the home.
+
+            </p>
+
+        </article>
+
+
+    </div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     WHY SAVENS
+===================================================== -->
+
+<section class="section why" id="why">
+
+<div class="container">
+
+
+    <div class="eyebrow">
+        WHY CHOOSE SAVENS
+    </div>
+
+
+    <h2 class="section-title">
+        Care With Dignity, Respect &amp; Compassion
+    </h2>
+
+
+    <p class="section-description">
+
+        Our goal is to provide a supportive home environment
+        where residents feel safe, respected, valued and
+        comfortable.
+
+    </p>
+
 
 
     <div class="why-grid">
 
-        <div class="why-card">
-            <span>♥</span>
-            <h3>Compassionate Care</h3>
-            <p>
-                Care delivered with patience, understanding and respect.
-            </p>
-        </div>
 
-        <div class="why-card">
-            <span>⌂</span>
-            <h3>Home-like Environment</h3>
-            <p>
-                A welcoming residential setting designed for comfort.
-            </p>
-        </div>
+        <article class="why-card">
 
-        <div class="why-card">
-            <span>◎</span>
-            <h3>Personalized Attention</h3>
-            <p>
-                Individualized assistance based on each resident's needs.
-            </p>
-        </div>
-
-        <div class="why-card">
-            <span>♧</span>
-            <h3>Dignity & Independence</h3>
-            <p>
-                Supporting choice, dignity and independence whenever possible.
-            </p>
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     GALLERY PREVIEW
-========================= -->
-
-<section class="gallery-preview">
-
-    <div class="section-heading">
-
-        <p class="section-label">TAKE A LOOK INSIDE</p>
-
-        <h2>Our Home</h2>
-
-        <p>
-            Explore some of the comfortable spaces available at
-            Savens Adult Family Home.
-        </p>
-
-    </div>
-
-
-    <div class="gallery-preview-grid">
-
-        <img
-            src="images/living-room-main.jpg"
-            alt="Savens living room"
-        >
-
-        <img
-            src="images/kitchen.jpg"
-            alt="Savens kitchen"
-        >
-
-        <img
-            src="images/bathroom.jpg"
-            alt="Accessible bathroom"
-        >
-
-        <img
-            src="images/shared-room.jpg"
-            alt="Shared resident room"
-        >
-
-    </div>
-
-    <div class="center-button">
-
-        <a href="gallery.html" class="button button-primary">
-            View Full Gallery
-        </a>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     CONTACT CTA
-========================= -->
-
-<section class="contact-cta">
-
-    <div>
-
-        <p class="section-label gold">
-            CONTACT SAVENS
-        </p>
-
-        <h2>
-            Looking for a Caring,<br>
-            Comfortable Home?
-        </h2>
-
-        <p>
-            Contact Savens Adult Family Home to learn more about
-            our home and the support we provide.
-        </p>
-
-    </div>
-
-    <div class="contact-cta-buttons">
-
-        <a href="tel:9783289455" class="button button-light">
-            📞 978-328-9455
-        </a>
-
-        <a
-            href="mailto:josphinemaseri6@gmail.com"
-            class="button button-gold-outline"
-        >
-            Email Us
-        </a>
-
-    </div>
-
-</section>
-
-</main>
-
-
-<!-- =========================
-     FOOTER
-========================= -->
-
-<footer class="site-footer">
-
-    <div class="footer-grid">
-
-        <div>
-
-            <div class="footer-brand">
-                SAVENS
-                <span>ADULT FAMILY HOME</span>
+            <div class="why-card-icon">
+                ♥
             </div>
 
+            <h3>
+                Compassionate Care
+            </h3>
+
             <p>
-                Compassionate care, comfortable living,
-                and personalized support in a home-like environment.
+
+                Thoughtful assistance delivered with
+                patience, understanding and respect.
+
             </p>
 
-        </div>
+        </article>
 
 
-        <div>
 
-            <h4>Quick Links</h4>
+        <article class="why-card">
 
-            <a href="about.html">About</a>
-            <a href="services.html">Services</a>
-            <a href="our-home.html">Our Home</a>
-            <a href="gallery.html">Gallery</a>
-            <a href="contact.html">Contact</a>
+            <div class="why-card-icon">
+                ⌂
+            </div>
 
-        </div>
-
-
-        <div>
-
-            <h4>Contact</h4>
+            <h3>
+                Home-like Environment
+            </h3>
 
             <p>
-                8924 West Bonnie Ave<br>
+
+                A familiar residential setting designed
+                for comfort and everyday living.
+
+            </p>
+
+        </article>
+
+
+
+        <article class="why-card">
+
+            <div class="why-card-icon">
+                ◎
+            </div>
+
+            <h3>
+                Personalized Attention
+            </h3>
+
+            <p>
+
+                Individualized assistance based around
+                each resident's needs.
+
+            </p>
+
+        </article>
+
+
+
+        <article class="why-card">
+
+            <div class="why-card-icon">
+                ↗
+            </div>
+
+            <h3>
+                Dignity &amp; Independence
+            </h3>
+
+            <p>
+
+                Supporting personal choice, dignity
+                and independence whenever possible.
+
+            </p>
+
+        </article>
+
+
+    </div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CONTACT
+===================================================== -->
+
+<section class="contact" id="contact">
+
+<div class="contact-grid">
+
+
+    <div class="contact-info">
+
+
+        <div class="eyebrow">
+            CONTACT SAVENS
+        </div>
+
+
+        <h2>
+            Get In Touch
+        </h2>
+
+
+        <p>
+
+            Contact us to learn more about Savens Adult
+            Family Home, our services and available
+            accommodation.
+
+        </p>
+
+
+
+        <div class="contact-detail">
+
+            <div class="contact-detail-icon">
+                ⌖
+            </div>
+
+            <div>
+
+                8924 West Bonnie Ave
+                <br>
                 Kennewick, WA
-            </p>
 
-            <p>
-                <a href="tel:9783289455">
+            </div>
+
+        </div>
+
+
+
+        <div class="contact-detail">
+
+            <div class="contact-detail-icon">
+                ☎
+            </div>
+
+            <div>
+
+                <a href="tel:+19783289455">
                     978-328-9455
                 </a>
-            </p>
 
-            <p>
+            </div>
+
+        </div>
+
+
+
+        <div class="contact-detail">
+
+            <div class="contact-detail-icon">
+                ✉
+            </div>
+
+            <div>
+
                 <a href="mailto:josphinemaseri6@gmail.com">
                     josphinemaseri6@gmail.com
                 </a>
-            </p>
+
+            </div>
 
         </div>
 
+
     </div>
+
+
+
+    <div class="contact-form">
+
+
+        <h3>
+            Send Us a Message
+        </h3>
+
+
+        <form
+            action="https://formsubmit.co/josphinemaseri6@gmail.com"
+            method="POST">
+
+
+            <input
+                type="hidden"
+                name="_subject"
+                value="New inquiry from Savens website">
+
+
+            <input
+                type="hidden"
+                name="_captcha"
+                value="false">
+
+
+            <div class="form-row">
+
+
+                <div class="form-group">
+
+                    <label for="name">
+                        Your Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Enter your name"
+                        required>
+
+                </div>
+
+
+
+                <div class="form-group">
+
+                    <label for="email">
+                        Your Email
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Enter your email"
+                        required>
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="form-group">
+
+                <label for="phone">
+                    Phone Number
+                </label>
+
+                <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    placeholder="Enter your phone number">
+
+            </div>
+
+
+
+            <div class="form-group">
+
+                <label for="message">
+                    Message
+                </label>
+
+                <textarea
+                    id="message"
+                    name="message"
+                    rows="5"
+                    placeholder="How can we help you?"
+                    required></textarea>
+
+            </div>
+
+
+
+            <button
+                type="submit"
+                class="submit-button">
+
+                Send Message
+
+            </button>
+
+
+        </form>
+
+    </div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="footer">
+
+<div class="container">
+
+
+    <div class="footer-grid">
+
+
+        <div class="footer-about">
+
+
+            <div class="footer-logo">
+
+                <strong>
+                    Savens
+                </strong>
+
+                <span>
+                    Adult Family Home
+                </span>
+
+            </div>
+
+
+            <p>
+
+                Compassionate care, comfortable living
+                and personalized support in a welcoming
+                home-like environment.
+
+            </p>
+
+
+        </div>
+
+
+
+        <div class="footer-links">
+
+            <h4>
+                Quick Links
+            </h4>
+
+            <a href="#home">
+                Home
+            </a>
+
+            <a href="#about">
+                About
+            </a>
+
+            <a href="#services">
+                Services
+            </a>
+
+            <a href="#our-home">
+                Our Home
+            </a>
+
+            <a href="#gallery">
+                Gallery
+            </a>
+
+            <a href="#contact">
+                Contact
+            </a>
+
+        </div>
+
+
+
+        <div class="footer-contact">
+
+            <h4>
+                Contact
+            </h4>
+
+            <p>
+
+                8924 West Bonnie Ave
+                <br>
+                Kennewick, WA
+
+            </p>
+
+
+            <a href="tel:+19783289455">
+                978-328-9455
+            </a>
+
+
+            <a href="mailto:josphinemaseri6@gmail.com">
+                josphinemaseri6@gmail.com
+            </a>
+
+        </div>
+
+
+    </div>
+
 
 
     <div class="footer-bottom">
-        © 2026 Savens Adult Family Home. All rights reserved.
+
+        © 2026 Savens Adult Family Home.
+        All rights reserved.
+
     </div>
+
+
+</div>
 
 </footer>
 
 
+
 <script>
 
-const menuToggle = document.getElementById("menuToggle");
-const mainNav = document.getElementById("mainNav");
+/* MOBILE NAVIGATION */
 
-menuToggle.addEventListener("click", function () {
-    mainNav.classList.toggle("show");
+const menuButton =
+    document.getElementById("menuButton");
+
+const mainNav =
+    document.getElementById("mainNav");
+
+
+menuButton.addEventListener(
+    "click",
+    function(){
+
+        mainNav.classList.toggle("open");
+
+    }
+);
+
+
+/* CLOSE MOBILE MENU AFTER CLICK */
+
+document
+.querySelectorAll(".main-nav a")
+.forEach(function(link){
+
+    link.addEventListener(
+        "click",
+        function(){
+
+            mainNav.classList.remove("open");
+
+        }
+    );
+
 });
 
 </script>
+
 
 </body>
 </html>
