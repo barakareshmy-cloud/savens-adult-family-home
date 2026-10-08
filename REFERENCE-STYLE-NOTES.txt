@@ -1,0 +1,7 @@
+This version follows the dark reference-card style:
+- compact equal-height cards
+- dark teal/black surfaces
+- gold accent lines/arrows
+- no large empty card space
+- clickable cards route to the relevant page/section
+- headings no longer clip into the top edge
