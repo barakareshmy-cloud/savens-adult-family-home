@@ -1390,3 +1390,113 @@ select{
     padding:17px !important;
   }
 }
+
+
+/* =========================================================
+   PREMIUM DARK HEADER — FINAL
+   Removes the white header strip and matches SAVENS palette.
+   ========================================================= */
+
+.site-header{
+  background:rgba(6,47,58,.98) !important;
+  border-bottom:1px solid rgba(214,154,40,.32) !important;
+  box-shadow:0 4px 18px rgba(0,0,0,.20) !important;
+  backdrop-filter:blur(8px);
+}
+
+.navbar{
+  min-height:86px !important;
+}
+
+/* Premium logo sits cleanly on dark header */
+.premium-brand{
+  display:flex;
+  align-items:center;
+}
+.site-logo{
+  width:190px !important;
+  max-height:76px;
+  object-fit:contain;
+}
+
+/* Desktop navigation */
+.main-nav a{
+  color:#ffffff !important;
+  font-weight:800;
+}
+.main-nav a:hover{
+  color:#f0bd50 !important;
+}
+.main-nav a:after{
+  background:#d69a28 !important;
+}
+.main-nav a.active{
+  color:#f0bd50 !important;
+}
+
+/* Gold phone button */
+.call-btn{
+  background:linear-gradient(135deg,#f4c75e,#d99b28) !important;
+  color:#073843 !important;
+  border:1px solid rgba(255,255,255,.20);
+  box-shadow:0 6px 16px rgba(0,0,0,.18);
+}
+.call-btn:hover{
+  filter:brightness(1.05);
+  transform:translateY(-1px);
+}
+
+/* Mobile menu button */
+.menu-btn{
+  color:#ffffff !important;
+}
+
+/* Mobile/tablet dropdown stays dark, not white */
+@media(max-width:980px){
+  .main-nav{
+    background:#073843 !important;
+    border-top:1px solid rgba(214,154,40,.28);
+  }
+
+  .main-nav a{
+    color:#ffffff !important;
+    border-bottom:1px solid rgba(255,255,255,.10) !important;
+  }
+
+  .main-nav a:hover,
+  .main-nav a.active{
+    color:#f0bd50 !important;
+    background:rgba(255,255,255,.04);
+  }
+
+  .site-logo{
+    width:160px !important;
+    max-height:66px;
+  }
+}
+
+/* Android / small screens */
+@media(max-width:640px){
+  .navbar{
+    min-height:72px !important;
+  }
+
+  .site-logo{
+    width:138px !important;
+    max-height:58px;
+  }
+
+  .menu-btn{
+    width:46px;
+    height:46px;
+    border:1px solid rgba(214,154,40,.35);
+    border-radius:10px;
+    background:rgba(255,255,255,.04);
+  }
+}
+
+@media(max-width:380px){
+  .site-logo{
+    width:122px !important;
+  }
+}

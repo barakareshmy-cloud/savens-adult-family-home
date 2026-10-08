@@ -1,0 +1,8 @@
+Premium dark SAVENS header applied:
+- White header removed.
+- Deep teal header background.
+- White navigation text.
+- Gold active/hover accents.
+- Gold phone button.
+- Dark mobile menu background.
+- Responsive on Android, tablets and desktop.
