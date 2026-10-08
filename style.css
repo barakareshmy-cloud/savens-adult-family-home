@@ -217,3 +217,114 @@ footer{background:var(--navy2);color:#d6e4e6;padding:34px 0}.footer-grid{display
   .why-photo-card,
   .why-photo-overlay{min-height:300px}
 }
+
+
+/* ===== Ticket-style full-photo SAVENS cards ===== */
+.ticket-card-grid{
+  display:grid;
+  gap:16px;
+  margin-top:28px;
+}
+.ticket-card-grid.three{
+  grid-template-columns:repeat(3,minmax(0,1fr));
+}
+.ticket-photo-card{
+  position:relative;
+  display:block;
+  min-height:390px;
+  overflow:hidden;
+  border-radius:18px;
+  background-size:cover;
+  background-position:center;
+  color:#fff;
+  text-decoration:none;
+  border:1px solid rgba(214,154,40,.38);
+  box-shadow:0 12px 28px rgba(7,38,45,.14);
+  isolation:isolate;
+  transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease;
+}
+.ticket-photo-card::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(5,24,30,.04) 0%,
+      rgba(5,24,30,.18) 36%,
+      rgba(5,24,30,.84) 70%,
+      rgba(5,24,30,.98) 100%
+    );
+  z-index:-1;
+}
+.ticket-photo-card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 20px 42px rgba(7,38,45,.22);
+  border-color:rgba(214,154,40,.75);
+}
+.ticket-photo-card:focus-visible{
+  outline:3px solid var(--gold);
+  outline-offset:4px;
+}
+.ticket-card-overlay{
+  min-height:390px;
+  padding:20px;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+}
+.ticket-badge{
+  align-self:flex-start;
+  margin-bottom:auto;
+  padding:6px 11px;
+  border-radius:999px;
+  border:1px solid rgba(255,215,119,.45);
+  background:rgba(10,59,73,.72);
+  color:#ffd777;
+  font-size:10px;
+  font-weight:900;
+  letter-spacing:.7px;
+  backdrop-filter:blur(3px);
+}
+.ticket-content{
+  margin-top:120px;
+}
+.ticket-kicker{
+  display:block;
+  color:#ffd777;
+  font-size:10px;
+  font-weight:900;
+  letter-spacing:1.3px;
+  margin-bottom:5px;
+}
+.ticket-photo-card h3{
+  color:#fff;
+  font-size:23px;
+  line-height:1.15;
+  margin:0 0 7px;
+  text-shadow:0 2px 6px rgba(0,0,0,.42);
+}
+.ticket-photo-card p{
+  color:#e9f2f3;
+  font-size:14px;
+  line-height:1.5;
+  margin:0;
+}
+.ticket-button{
+  align-self:flex-end;
+  margin-top:18px;
+  padding:10px 14px;
+  border-radius:9px;
+  background:var(--gold);
+  color:#163740;
+  font-size:11px;
+  font-weight:900;
+  letter-spacing:.3px;
+}
+@media(max-width:900px){
+  .ticket-card-grid.three{grid-template-columns:1fr 1fr}
+}
+@media(max-width:560px){
+  .ticket-card-grid.three{grid-template-columns:1fr}
+  .ticket-photo-card,.ticket-card-overlay{min-height:360px}
+}
