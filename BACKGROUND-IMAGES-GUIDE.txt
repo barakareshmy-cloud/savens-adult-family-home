@@ -1,0 +1,17 @@
+SAVENS BACKGROUND PHOTO SLOTS
+
+You can replace any of these files in the images folder with your own photo.
+Keep the exact filename:
+
+bg-home-services.jpg
+bg-home-environment.jpg
+bg-home-about.jpg
+bg-about-philosophy.jpg
+bg-services.jpg
+bg-our-home.jpg
+bg-gallery.jpg
+bg-contact.jpg
+
+The website is designed so the image covers the entire section.
+There is NO white transparent layer over the whole image.
+Only the smaller dark content panel sits on top for text readability.

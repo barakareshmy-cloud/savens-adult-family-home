@@ -471,3 +471,110 @@ body .why-section{
   position:relative;
   z-index:1;
 }
+
+
+/* =========================================================
+   FINAL CLEAN FULL-IMAGE LAYOUT
+   NO full-page white/green transparent veil.
+   Photos remain fully visible; only local content panels
+   receive backgrounds for readability.
+   ========================================================= */
+
+html, body{
+  background:#0b343f !important;
+}
+
+.clean-image-section{
+  position:relative !important;
+  background-size:cover !important;
+  background-position:center !important;
+  background-repeat:no-repeat !important;
+  background-color:transparent !important;
+  min-height:520px;
+  display:flex;
+  align-items:center;
+  padding:72px 0 !important;
+}
+
+/* Kill every old large translucent overlay. */
+.clean-image-section::before,
+.clean-image-section::after{
+  content:none !important;
+  display:none !important;
+}
+
+/* Never paint the whole section white, cream, or pale green. */
+body .clean-image-section.section,
+body .clean-image-section.section-soft,
+body .clean-image-section.section-cream,
+body .clean-image-section.cta,
+body .clean-image-section.why-section{
+  background-color:transparent !important;
+}
+
+/* Localized readable panel only. This is NOT a page-wide veil. */
+.clean-image-section > .container{
+  position:relative;
+  z-index:2;
+  padding:34px;
+  border-radius:22px;
+  background:rgba(5,37,46,.86);
+  border:1px solid rgba(255,255,255,.14);
+  box-shadow:0 18px 45px rgba(0,0,0,.22);
+  color:#fff;
+}
+
+/* Make headings and body copy readable on the localized dark panel. */
+.clean-image-section h2,
+.clean-image-section h3,
+.clean-image-section .lead,
+.clean-image-section p{
+  color:#fff !important;
+}
+.clean-image-section .eyebrow{
+  color:#9fe2c9 !important;
+}
+
+/* Cards keep their own normal treatment. */
+.clean-image-section .card,
+.clean-image-section .photo-grid figure,
+.clean-image-section .preview-grid figure{
+  background:#fff !important;
+  color:var(--ink) !important;
+}
+.clean-image-section .card h3,
+.clean-image-section .card p,
+.clean-image-section .photo-grid figcaption,
+.clean-image-section .preview-grid figcaption{
+  color:var(--ink) !important;
+}
+
+/* Full-photo ticket/service cards stay photographic and clickable. */
+.clean-image-section .ticket-photo-card,
+.clean-image-section .service-photo-card,
+.clean-image-section .why-photo-card{
+  background-color:#153c45 !important;
+}
+
+/* Contact page: keep form readable without blank white bands. */
+.contact-form{
+  background:rgba(5,37,46,.92) !important;
+  color:#fff;
+}
+.contact-form h2,
+.contact-form label{
+  color:#fff !important;
+}
+.contact-form .eyebrow{color:#9fe2c9 !important}
+
+/* Mobile */
+@media(max-width:900px){
+  .clean-image-section{
+    min-height:auto;
+    padding:46px 0 !important;
+    background-attachment:scroll;
+  }
+  .clean-image-section > .container{
+    padding:24px;
+  }
+}
