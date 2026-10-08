@@ -1,0 +1,8 @@
+Responsive behavior added:
+- Android / iPhone: one-column cards, hamburger navigation, full-width buttons and form fields.
+- Tablets: two-column cards where space allows.
+- Desktop: multi-column layout.
+- Gallery/lightbox is phone-friendly.
+- Phone/email actions remain tappable.
+- Premium SAVENS logo installed in the header.
+- No horizontal scrolling should occur on standard phone widths.

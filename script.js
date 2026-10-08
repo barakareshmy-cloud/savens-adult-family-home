@@ -70,3 +70,34 @@ if(imageButtons.length){
     if(e.key==='ArrowRight') show(current+1);
   });
 }
+
+
+/* Final responsive navigation behavior */
+(function(){
+  const btn=document.getElementById('menuBtn');
+  const nav=document.getElementById('mainNav');
+  if(!btn || !nav) return;
+
+  btn.setAttribute('aria-expanded','false');
+  btn.setAttribute('aria-controls','mainNav');
+
+  btn.addEventListener('click',()=>{
+    const open=nav.classList.contains('open');
+    btn.setAttribute('aria-expanded', String(!open));
+  });
+
+  document.addEventListener('click',(e)=>{
+    if(window.innerWidth>980) return;
+    if(!nav.classList.contains('open')) return;
+    if(nav.contains(e.target) || btn.contains(e.target)) return;
+    nav.classList.remove('open');
+    btn.setAttribute('aria-expanded','false');
+  });
+
+  window.addEventListener('resize',()=>{
+    if(window.innerWidth>980){
+      nav.classList.remove('open');
+      btn.setAttribute('aria-expanded','false');
+    }
+  });
+})();
