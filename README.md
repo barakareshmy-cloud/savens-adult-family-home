@@ -43,3 +43,20 @@ Before testing on GitHub Pages, add this domain in:
 Firebase Console > Authentication > Settings > Authorized domains
 
 barakareshmy-cloud.github.io
+
+
+## Contact form and Gmail
+The Contact form sends website inquiries to:
+josphinemaseri6@gmail.com
+
+Direct email links also open the customer's email app with a SAVENS inquiry template.
+
+IMPORTANT FOR FIRST FORM SUBMISSION:
+FormSubmit may send an activation/confirmation email to josphinemaseri6@gmail.com the first time the form is used.
+Open that email and confirm/activate the form. After activation, future customer messages will be delivered normally.
+
+Customer experience:
+1. Customer completes the form.
+2. Message is delivered to SAVENS Gmail.
+3. Customer is redirected to thank-you.html.
+4. An automatic acknowledgement is requested to the customer's entered email.

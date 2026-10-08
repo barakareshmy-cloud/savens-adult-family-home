@@ -1,0 +1,7 @@
+Corrections made:
+1. Services page no longer has large blank white boxes.
+2. Service cards are now full-photo clickable cards.
+3. Contact spacing and email wrapping are corrected.
+4. Our Home uses a real SAVENS interior photo as its page background.
+5. Gallery captions and white-card text remain readable.
+6. Mobile responsiveness tightened.
