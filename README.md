@@ -30,3 +30,16 @@ To activate secure admin login:
 4. Paste the Firebase Web App values into firebase-config.js.
 
 Important: Because GitHub Pages is static, secure login alone does not make page edits persist. Persistent content editing requires a backend/database (for example Firestore) or GitHub API write access.
+
+
+## Firebase connected
+The Firebase web configuration is installed in firebase-config.js.
+
+Authorized admins:
+- josphinemaseri6@gmail.com
+- barakareshmy@gmail.com
+
+Before testing on GitHub Pages, add this domain in:
+Firebase Console > Authentication > Settings > Authorized domains
+
+barakareshmy-cloud.github.io

@@ -4,8 +4,11 @@ export const ADMIN_EMAILS = [
 ];
 
 export const firebaseConfig = {
-  apiKey: "PASTE_FIREBASE_API_KEY",
-  authDomain: "PASTE_FIREBASE_AUTH_DOMAIN",
-  projectId: "PASTE_FIREBASE_PROJECT_ID",
-  appId: "PASTE_FIREBASE_APP_ID"
+  apiKey: "AIzaSyDZKp1JTi6yK2tQfQlJ4bzwrznf7ZWAIB4",
+  authDomain: "savens-adult-family-home-4dd23.firebaseapp.com",
+  projectId: "savens-adult-family-home-4dd23",
+  storageBucket: "savens-adult-family-home-4dd23.firebasestorage.app",
+  messagingSenderId: "530922553010",
+  appId: "1:530922553010:web:c4b55d4a0711893ea913ab",
+  measurementId: "G-EFTNPGF328"
 };
