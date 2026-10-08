@@ -1,4 +1,7 @@
-export const ADMIN_EMAIL = "josphinemaseri6@gmail.com";
+export const ADMIN_EMAILS = [
+  "josphinemaseri6@gmail.com",
+  "barakareshmy@gmail.com"
+];
 
 export const firebaseConfig = {
   apiKey: "PASTE_FIREBASE_API_KEY",

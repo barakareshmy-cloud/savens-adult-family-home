@@ -21,6 +21,7 @@ Important:
 ## Admin authentication
 The admin page is prepared for Firebase Google Sign-In and restricts access to:
 josphinemaseri6@gmail.com
+- barakareshmy@gmail.com
 
 To activate secure admin login:
 1. Create a Firebase project.
