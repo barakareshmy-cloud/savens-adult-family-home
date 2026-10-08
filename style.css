@@ -328,3 +328,35 @@ footer{background:var(--navy2);color:#d6e4e6;padding:34px 0}.footer-grid{display
   .ticket-card-grid.three{grid-template-columns:1fr}
   .ticket-photo-card,.ticket-card-overlay{min-height:360px}
 }
+
+
+/* ===== Care-photo section backgrounds ===== */
+.photo-bg-section{
+  position:relative;
+  isolation:isolate;
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+}
+.photo-bg-section::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(255,255,255,.88);
+  z-index:-1;
+}
+.photo-bg-section.soft-overlay::before{
+  background:rgba(242,247,244,.90);
+}
+.photo-bg-section.dark-overlay::before{
+  background:rgba(7,49,61,.78);
+}
+.photo-bg-section.dark-overlay h2,
+.photo-bg-section.dark-overlay h3,
+.photo-bg-section.dark-overlay .lead,
+.photo-bg-section.dark-overlay p{
+  color:#fff;
+}
+.photo-bg-section.dark-overlay .eyebrow{
+  color:#9de2c8;
+}
