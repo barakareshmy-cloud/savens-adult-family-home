@@ -360,3 +360,64 @@ footer{background:var(--navy2);color:#d6e4e6;padding:34px 0}.footer-grid{display
 .photo-bg-section.dark-overlay .eyebrow{
   color:#9de2c8;
 }
+
+
+/* ===== FULL-PAGE SAVENS PHOTO BACKGROUNDS ===== */
+body.home-bg,
+body.about-bg,
+body.services-bg,
+body.homecare-bg,
+body.gallery-bg,
+body.contact-bg{
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+  background-attachment:fixed;
+}
+body.home-bg{background-image:url('images/care-outdoor.jpg')}
+body.about-bg{background-image:url('images/care-wheelchair.jpg')}
+body.services-bg{background-image:url('images/care-team.jpg')}
+body.homecare-bg{background-image:url('images/care-wheelchair.jpg')}
+body.gallery-bg{background-image:url('images/care-outdoor.jpg')}
+body.contact-bg{background-image:url('images/care-team.jpg')}
+
+/* Remove the large plain-white page bands and let the photo show through. */
+body.home-bg .section,
+body.about-bg .section,
+body.services-bg .section,
+body.homecare-bg .section,
+body.gallery-bg .section,
+body.contact-bg .section{
+  background:rgba(245,249,247,.78);
+  backdrop-filter:blur(1px);
+}
+body.home-bg .section-soft,
+body.about-bg .section-soft,
+body.services-bg .section-soft,
+body.homecare-bg .section-soft,
+body.gallery-bg .section-soft,
+body.contact-bg .section-soft{
+  background:rgba(230,240,235,.80);
+}
+body.home-bg .section-cream,
+body.about-bg .section-cream,
+body.services-bg .section-cream,
+body.homecare-bg .section-cream,
+body.gallery-bg .section-cream,
+body.contact-bg .section-cream{
+  background:rgba(250,245,234,.80);
+}
+
+/* Existing special photo sections should be slightly more transparent so the image is obvious. */
+.photo-bg-section::before{background:rgba(255,255,255,.66)}
+.photo-bg-section.soft-overlay::before{background:rgba(238,246,242,.70)}
+
+/* Keep individual text/content cards readable without creating giant white page blocks. */
+.card,
+.photo-grid figure,
+.preview-grid figure{
+  background:rgba(255,255,255,.92);
+}
+.contact-form{
+  background:rgba(245,250,248,.82);
+}
