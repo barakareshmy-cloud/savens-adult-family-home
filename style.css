@@ -421,3 +421,53 @@ body.contact-bg .section-cream{
 .contact-form{
   background:rgba(245,250,248,.82);
 }
+
+
+/* ===== FINAL: NO PLAIN EMPTY BANDS ===== */
+/* Every main content section now has a real photo covering the full width. */
+.full-image-section{
+  position:relative !important;
+  isolation:isolate;
+  background-size:cover !important;
+  background-position:center !important;
+  background-repeat:no-repeat !important;
+  background-color:transparent !important;
+}
+.full-image-section::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:-1;
+  background:rgba(246,250,248,.76);
+}
+/* Softer tint for sections that previously used pale backgrounds. */
+.full-image-section.section-soft::before{
+  background:rgba(235,244,240,.78);
+}
+.full-image-section.section-cream::before{
+  background:rgba(251,247,238,.78);
+}
+/* Dark CTA sections remain readable while still showing their photo. */
+.full-image-section.cta::before,
+.full-image-section.why-section::before{
+  background:rgba(6,47,58,.83);
+}
+.full-image-section.cta h2,
+.full-image-section.cta p,
+.full-image-section.why-section h2,
+.full-image-section.why-section p{
+  color:#fff;
+}
+/* Remove old solid section fills that were causing the white/green blank bands. */
+body .section,
+body .section-soft,
+body .section-cream,
+body .cta,
+body .why-section{
+  background-color:transparent !important;
+}
+/* Keep content legible without hiding the background image across the whole section. */
+.full-image-section > .container{
+  position:relative;
+  z-index:1;
+}
