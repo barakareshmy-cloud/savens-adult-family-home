@@ -1891,3 +1891,201 @@ footer .accent{color:var(--executive-gold-soft)!important}
   .service-story{border-radius:20px!important}
   .menu-btn{border-color:rgba(214,162,59,.5)!important;color:#fff!important}
 }
+
+
+/* =========================================================
+   FINAL CONTRAST FIX: "Not Sure Which Service Fits Best?"
+   ========================================================= */
+body .support-fit-section{
+  background:
+    linear-gradient(135deg, #073843 0%, #0a4b58 100%) !important;
+  border-top:1px solid rgba(224,166,44,.28);
+  border-bottom:1px solid rgba(224,166,44,.22);
+}
+
+.support-fit-section .support-summary{
+  padding-top:8px;
+  padding-bottom:8px;
+}
+
+.support-fit-section .eyebrow{
+  color:#f2bd50 !important;
+}
+
+.support-fit-section h2{
+  color:#ffffff !important;
+  text-shadow:none !important;
+}
+
+.support-fit-section .lead{
+  color:#d9e8ea !important;
+  opacity:1 !important;
+}
+
+.support-fit-section .btn-dark{
+  background:linear-gradient(135deg,#f4c75e,#d99b28) !important;
+  color:#073843 !important;
+  border:1px solid rgba(255,255,255,.18);
+  box-shadow:0 8px 20px rgba(0,0,0,.16);
+  white-space:nowrap;
+}
+
+.support-fit-section .btn-dark:hover{
+  filter:brightness(1.05);
+  transform:translateY(-2px);
+}
+
+@media(max-width:900px){
+  .support-fit-section .support-summary{
+    display:block;
+  }
+  .support-fit-section .btn-dark{
+    margin-top:20px;
+  }
+}
+
+@media(max-width:560px){
+  .support-fit-section{
+    padding:50px 0 !important;
+  }
+  .support-fit-section h2{
+    font-size:31px !important;
+  }
+  .support-fit-section .btn-dark{
+    width:100%;
+  }
+}
+
+/* =========================================================
+   PRESIDENTIAL CONTACT PAGE UPGRADE
+   Removes the white form slab and replaces it with a
+   premium glass-style transparent contact experience.
+   ========================================================= */
+.contact-wrap.clean-image-section{
+  position:relative;
+  grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr) !important;
+  gap:28px;
+  padding:72px min(4vw,36px) !important;
+  background-position:center center !important;
+  background-size:cover !important;
+  background-repeat:no-repeat !important;
+  overflow:hidden;
+}
+
+.contact-wrap.clean-image-section::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(115deg, rgba(3,31,39,.84) 0%, rgba(6,49,61,.70) 38%, rgba(5,57,71,.58) 100%);
+  z-index:0;
+}
+
+.contact-wrap.clean-image-section > *{
+  position:relative;
+  z-index:1;
+}
+
+.contact-info,
+.contact-form{
+  background:rgba(4,35,43,.50) !important;
+  backdrop-filter:blur(18px) saturate(135%);
+  -webkit-backdrop-filter:blur(18px) saturate(135%);
+  border:1px solid rgba(255,255,255,.14);
+  box-shadow:0 24px 60px rgba(0,0,0,.26);
+  border-radius:24px;
+}
+
+.contact-info{
+  background:linear-gradient(145deg, rgba(6,57,68,.72), rgba(10,75,88,.56)) !important;
+}
+
+.contact-form{
+  color:#ffffff !important;
+}
+
+.contact-form h2,
+.contact-form .form-intro,
+.contact-form label,
+.contact-form .form-note,
+.contact-form p,
+.contact-form .eyebrow{
+  color:#ffffff !important;
+}
+
+.contact-form .eyebrow{
+  color:#a8f2d4 !important;
+}
+
+.contact-form .form-intro,
+.contact-form .form-note{
+  color:rgba(233,243,245,.92) !important;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form select{
+  background:rgba(255,255,255,.10) !important;
+  color:#ffffff !important;
+  border:1px solid rgba(255,255,255,.20) !important;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.06);
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder{
+  color:rgba(240,246,247,.75);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus,
+.contact-form select:focus{
+  outline:none;
+  border-color:rgba(242,190,77,.88) !important;
+  box-shadow:0 0 0 3px rgba(242,190,77,.20);
+}
+
+.contact-form select{
+  background:rgba(255,255,255,.10) !important;
+  color:#ffffff !important;
+}
+
+.contact-form select option{
+  color:#173943;
+  background:#f4f7f6;
+}
+
+.submit{
+  background:linear-gradient(135deg,#f4ca67 0%, #d89b26 100%) !important;
+  color:#073843 !important;
+  border:1px solid rgba(255,255,255,.16);
+  box-shadow:0 14px 28px rgba(0,0,0,.18);
+  font-weight:900;
+  letter-spacing:.2px;
+}
+
+.submit:hover{
+  transform:translateY(-2px);
+  filter:brightness(1.03);
+}
+
+.map{
+  border:1px solid rgba(255,255,255,.14) !important;
+  overflow:hidden;
+  background:rgba(255,255,255,.08);
+}
+
+.direct-email-button{
+  box-shadow:0 14px 28px rgba(0,0,0,.16);
+}
+
+@media (max-width: 900px){
+  .contact-wrap.clean-image-section{
+    grid-template-columns:1fr !important;
+    gap:20px;
+    padding:38px 18px !important;
+  }
+  .contact-info,
+  .contact-form{
+    border-radius:20px;
+  }
+}
