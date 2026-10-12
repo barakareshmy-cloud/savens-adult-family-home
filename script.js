@@ -83,7 +83,7 @@ if(imageButtons.length){
 
   btn.addEventListener('click',()=>{
     const open=nav.classList.contains('open');
-    btn.setAttribute('aria-expanded', String(!open));
+    btn.setAttribute('aria-expanded', String(open));
   });
 
   document.addEventListener('click',(e)=>{
@@ -101,3 +101,40 @@ if(imageButtons.length){
     }
   });
 })();
+
+
+/* Prefill contact form from service links */
+(function(){
+  const params = new URLSearchParams(window.location.search);
+  const serviceParam = params.get('service');
+  if(!serviceParam) return;
+
+  const reason = document.getElementById('contactReason');
+  const message = document.getElementById('contactMessage');
+  if(reason){
+    reason.value = 'Services and care';
+  }
+  if(message && !message.value.trim()){
+    message.value = `Hello SAVENS,
+
+I would like to ask about ${serviceParam}.
+
+Please contact me with more information.
+`;
+  }
+})();
+
+
+/* Whole premium service layouts are clickable */
+document.querySelectorAll('.premium-clickable[data-href]').forEach(panel=>{
+  const go=()=>{ const href=panel.dataset.href; if(href) window.location.href=href; };
+  panel.addEventListener('click',e=>{
+    if(e.target.closest('a,button,input,select,textarea')) return;
+    go();
+  });
+  panel.addEventListener('keydown',e=>{
+    if((e.key==='Enter'||e.key===' ') && !e.target.closest('a,button,input,select,textarea')){
+      e.preventDefault(); go();
+    }
+  });
+});

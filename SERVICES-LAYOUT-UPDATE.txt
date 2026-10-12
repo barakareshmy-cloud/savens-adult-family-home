@@ -1,0 +1,2 @@
+Updated the Services page so each service uses a different attractive layout style with its own image, explanation and contact action.
+Also added service prefill behavior for contact.html?service=... links.

@@ -1,0 +1,7 @@
+Premium redesign applied across SAVENS:
+- executive deep-teal and gold visual system
+- refined spacing, shadows, typography and buttons
+- premium header, cards, galleries, contact and footer
+- service sections remain visually distinct
+- entire service layouts are touch/click enabled and route to the matching inquiry
+- no claims of government or presidential affiliation are shown on the website

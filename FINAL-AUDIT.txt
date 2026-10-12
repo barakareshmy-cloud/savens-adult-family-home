@@ -1,0 +1,6 @@
+SAVENS Executive Premium audit
+==============================
+Duplicate-attribute/local-reference/ID/alt issues remaining: 0
+Whole clickable service layouts found: 4
+
+PASS: No broken local references, duplicate HTML attributes, duplicate IDs, or missing image alt text found in the audit.

@@ -1,0 +1,10 @@
+Android/mobile layout behavior:
+
+- Services: horizontal swipe cards instead of one long vertical stack.
+- Why Choose SAVENS: compact 2x2 grid on normal phones.
+- Our Home: swipeable photo cards.
+- About: image + text stacked as a separate layout.
+- Philosophy / room detail cards: swipe horizontally.
+- Contact: separate contact-details block and form block.
+
+All main website sections and pages keep distinct layouts.
